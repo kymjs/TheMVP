@@ -1,12 +1,10 @@
 [![OSL](http://www.kymjs.com/image/logo_s.png)](http://www.kymjs.com/works/)
 =================
 
-## KJGallery简介
-一个支持Gif图片以及普通图片预览，支持双击缩放，单机退出，同时可以选择使用jni的形式去高效加载gif或者更更精简的(仅2个类)gif控件     
-详细介绍请查看博客：http://www.kymjs.com/code/2015/10/18/01/    
-
-## 运行截图
-[![开源实验室项目](https://github.com/kymjs/KJGallery/blob/master/kjgallery.gif)](http://kymjs.com/works)
+## TheMVP简介
+An Android MVP Architecture Diagram Framwork. Please wait me write blog for more description. 
+一个Android下的MVP模式的开发架构module，更多相关介绍请等待我抽空写完会发在我的博客里。    
+http://www.kymjs.com/    
 
 ##开源协议
 ```
