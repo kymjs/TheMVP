@@ -2,7 +2,7 @@
 =================
 
 ## TheMVP简介
-An Android MVP Architecture Diagram Framwork. Please wait me write blog for more description. 
+An Android MVP Architecture Diagram Framwork. Please wait me write blog for more description.     
 一个Android下的MVP模式的开发架构module，更多相关介绍请等待我抽空写完会发在我的博客里。    
 http://www.kymjs.com/    
 
