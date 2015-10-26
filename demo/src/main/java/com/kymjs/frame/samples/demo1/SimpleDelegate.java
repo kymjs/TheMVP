@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.kymjs.frame.samples.mvp;
+package com.kymjs.frame.samples.demo1;
 
 import android.widget.TextView;
 
@@ -27,23 +27,21 @@ import com.kymjs.frame.view.AppDelegate;
  */
 public class SimpleDelegate extends AppDelegate {
 
-    private TextView textView;
-
     @Override
     public int getRootLayoutId() {
         return R.layout.delegate_simple;
     }
 
     @Override
-    protected void initWidget() {
+    public void initWidget() {
         super.initWidget();
-        textView = bindView(R.id.text);
+        TextView textView = get(R.id.text);
         textView.setText("在视图代理层创建布局");
     }
 
     public void setText(String text) {
         //get(id)等同于bindview(id)
-        if (textView == null) textView = get(R.id.text);
+        TextView textView = get(R.id.text);
         textView.setText(text);
     }
 }

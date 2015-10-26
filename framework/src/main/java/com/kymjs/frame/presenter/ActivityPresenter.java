@@ -37,6 +37,7 @@ public abstract class ActivityPresenter<T extends IDelegate> extends AppCompatAc
             viewDelegate = getDelegateClass().newInstance();
             viewDelegate.init(getLayoutInflater(), null, savedInstanceState);
             setContentView(viewDelegate.getRootView());
+            viewDelegate.initWidget();
         } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {

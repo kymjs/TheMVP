@@ -15,8 +15,10 @@
 				<category android:name="android.intent.category.LAUNCHER"/>
 			</intent-filter>
 		</activity>
-		<activity android:name=".mvp.SimpleActivity"/>
-		<activity android:name=".databind.DemoActivity"/>
+		<activity android:name=".demo1.SimpleActivity"/>
+		<activity android:name=".demo2.DemoActivity"/>
+		<activity android:name=".demo3.ShellActivity"/>
+		<activity android:name=".demo4.ShellActivity"/>
 	</application>
 
 </manifest>

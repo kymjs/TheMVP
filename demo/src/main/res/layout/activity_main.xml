@@ -20,5 +20,10 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:text="示例3:在fragment中的实现"/>
+	<Button
+		android:id="@+id/button4"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="示例3:在fragment中的数据绑定"/>
 
 </LinearLayout>

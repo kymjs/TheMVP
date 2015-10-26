@@ -45,7 +45,8 @@ public abstract class AppDelegate implements IDelegate {
         return rootView;
     }
 
-    protected void initWidget() {
+    @Override
+    public void initWidget() {
     }
 
     public <T extends View> T bindView(int id) {

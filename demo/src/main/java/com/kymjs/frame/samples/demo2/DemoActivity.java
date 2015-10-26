@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.kymjs.frame.samples.databind;
+package com.kymjs.frame.samples.demo2;
 
 import android.os.Bundle;
 import android.support.v4.content.Loader;
@@ -22,10 +22,10 @@ import android.view.View;
 import com.kymjs.frame.DataBindActivity;
 import com.kymjs.frame.SimpleLoader;
 import com.kymjs.frame.samples.R;
-import com.kymjs.frame.samples.mvp.SimpleDelegate;
+import com.kymjs.frame.samples.demo1.SimpleDelegate;
 
 /**
- * 这里就偷懒直接复用simple里面的simpleDelegate视图代理了
+ * 这里就偷懒直接复用demo1里面的simpleDelegate视图代理了
  * 同样也说明了，我们可以不用做任何改变就把一个视图层的东西拿来复用
  *
  * @author kymjs (http://www.kymjs.com/) on 10/24/15.

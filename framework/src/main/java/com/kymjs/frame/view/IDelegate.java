@@ -30,4 +30,6 @@ public interface IDelegate {
     void init(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState);
 
     View getRootView();
+    
+    void initWidget();
 }

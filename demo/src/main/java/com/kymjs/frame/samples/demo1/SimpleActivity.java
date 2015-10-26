@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.kymjs.frame.samples.mvp;
+package com.kymjs.frame.samples.demo1;
 
 import android.view.View;
 

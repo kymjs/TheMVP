@@ -55,5 +55,15 @@ public abstract class FragmentPresenter<T extends IDelegate> extends Fragment {
         return viewDelegate.getRootView();
     }
 
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        viewDelegate.initWidget();
+        bindEvenListener();
+    }
+
+    protected void bindEvenListener() {
+    }
+
     protected abstract Class<T> getDelegateClass();
 }
