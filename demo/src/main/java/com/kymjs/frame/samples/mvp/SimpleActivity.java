@@ -40,18 +40,9 @@ public class SimpleActivity extends ActivityPresenter<SimpleDelegate> implements
     }
 
     @Override
-    protected void onRestart() {
-        super.onRestart();
-
-    }
-
-    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button1:
-//              也可以根据id得到这个控件(重复调用不会多次findview)
-//              TextView tv = viewDelegate.get(R.id.helloword);
-//              tv.setText("你点击了button");
                 viewDelegate.setText("你点击了button");
                 break;
         }

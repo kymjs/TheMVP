@@ -35,8 +35,8 @@ public class DemoActivity extends DataBindActivity<SimpleDelegate, JavaBean> {
     JavaBean data = new JavaBean("名字");
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void bindEvenListener() {
+        super.bindEvenListener();
         //模拟数据改变(比如也可以写在网络请求成功的时候改变数据)
         viewDelegate.get(R.id.button1).setOnClickListener(new View.OnClickListener() {
             @Override
