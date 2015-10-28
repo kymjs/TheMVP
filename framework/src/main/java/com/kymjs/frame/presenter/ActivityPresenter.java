@@ -17,6 +17,8 @@ package com.kymjs.frame.presenter;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 
 import com.kymjs.frame.view.IDelegate;
 
@@ -37,6 +39,10 @@ public abstract class ActivityPresenter<T extends IDelegate> extends AppCompatAc
             viewDelegate = getDelegateClass().newInstance();
             viewDelegate.init(getLayoutInflater(), null, savedInstanceState);
             setContentView(viewDelegate.getRootView());
+            Toolbar toolbar = viewDelegate.getToolbar();
+            if (toolbar != null) {
+                setSupportActionBar(toolbar);
+            }
             viewDelegate.initWidget();
         } catch (InstantiationException e) {
             e.printStackTrace();
@@ -47,6 +53,20 @@ public abstract class ActivityPresenter<T extends IDelegate> extends AppCompatAc
     }
 
     protected void bindEvenListener() {
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        if (viewDelegate.getOptionsMenuId() != 0) {
+            getMenuInflater().inflate(viewDelegate.getOptionsMenuId(), menu);
+        }
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        viewDelegate = null;
     }
 
     protected abstract Class<T> getDelegateClass();

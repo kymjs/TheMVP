@@ -31,7 +31,7 @@ public class Demo4Fragment extends DataBindFragment<FragmentDelegate, User> {
     public void viewBindModel(User user) {
         super.viewBindModel(user);
         if (user != null && user.getAge() != null && user.getName() != null) {
-            viewDelegate.setResult(user);
+            viewDelegate.setResult(user.getName(), user.getAge());
         }
     }
 

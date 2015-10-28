@@ -30,8 +30,8 @@ public class FragmentDelegate extends AppDelegate {
         return et.getText().toString();
     }
 
-    public void setResult(User user) {
+    public void setResult(String name, String age) {
         TextView textView = get(R.id.text);
-        textView.setText(String.format("姓名+ %s + 年龄 + %s", user.getName(), user.getAge()));
+        textView.setText(String.format("姓名+ %s + 年龄 + %s", name, age));
     }
 }

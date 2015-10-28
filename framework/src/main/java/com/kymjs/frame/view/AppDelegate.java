@@ -16,6 +16,7 @@
 package com.kymjs.frame.view;
 
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,6 +42,15 @@ public abstract class AppDelegate implements IDelegate {
     }
 
     @Override
+    public int getOptionsMenuId() {
+        return 0;
+    }
+
+    public Toolbar getToolbar() {
+        return null;
+    }
+
+    @Override
     public View getRootView() {
         return rootView;
     }
@@ -60,5 +70,14 @@ public abstract class AppDelegate implements IDelegate {
 
     public <T extends View> T get(int id) {
         return (T) bindView(id);
+    }
+
+    public void setOnClickListener(View.OnClickListener listener, int... ids) {
+        if (ids == null) {
+            return;
+        }
+        for (int id : ids) {
+            get(id).setOnClickListener(listener);
+        }
     }
 }

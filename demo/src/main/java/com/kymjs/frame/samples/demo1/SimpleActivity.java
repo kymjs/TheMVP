@@ -36,7 +36,8 @@ public class SimpleActivity extends ActivityPresenter<SimpleDelegate> implements
     @Override
     protected void bindEvenListener() {
         super.bindEvenListener();
-        viewDelegate.get(R.id.button1).setOnClickListener(this);
+        //可以同时对多个控件设置同一个点击事件,后面id参数可以传多个
+        viewDelegate.setOnClickListener(this, R.id.button1);
     }
 
     @Override
