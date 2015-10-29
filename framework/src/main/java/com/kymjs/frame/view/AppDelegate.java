@@ -36,7 +36,7 @@ public abstract class AppDelegate implements IDelegate {
     public abstract int getRootLayoutId();
 
     @Override
-    public void init(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public void create(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         int rootLayoutId = getRootLayoutId();
         rootView = inflater.inflate(rootLayoutId, container, false);
     }
