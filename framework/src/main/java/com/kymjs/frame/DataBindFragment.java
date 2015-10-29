@@ -25,7 +25,9 @@ public abstract class DataBindFragment<T extends IDelegate, D extends IModel> ex
         getLoaderManager().initLoader(getLoaderId(), null, this);
     }
 
-    protected abstract int getLoaderId();
+    protected int getLoaderId() {
+        return 0;
+    }
 
     protected abstract Loader<D> getDataLoader(Bundle args);
 

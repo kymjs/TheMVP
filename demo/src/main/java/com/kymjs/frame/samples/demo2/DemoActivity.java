@@ -61,16 +61,6 @@ public class DemoActivity extends DataBindActivity<SimpleDelegate, JavaBean> {
     }
 
     /**
-     * 视图监听的监听器id，每个视图的监听器都应该有唯一id
-     *
-     * @return
-     */
-    @Override
-    protected int getLoaderId() {
-        return 0;
-    }
-
-    /**
      * 使用框架中已经实现的最简单的DataLoader
      * 当然，也可以自己继承SimpleLoader或参考其实现自己写一个数据Loader
      *

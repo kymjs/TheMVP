@@ -36,11 +36,6 @@ public class Demo4Fragment extends DataBindFragment<FragmentDelegate, User> {
     }
 
     @Override
-    protected int getLoaderId() {
-        return 1;
-    }
-
-    @Override
     protected Loader<User> getDataLoader(Bundle args) {
         return new SimpleLoader(getActivity(), data);
     }
