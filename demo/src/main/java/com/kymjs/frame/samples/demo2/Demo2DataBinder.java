@@ -13,25 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.kymjs.frame.databind;
+package com.kymjs.frame.samples.demo2;
 
-import android.content.Context;
-import android.support.v4.content.AsyncTaskLoader;
-
-import com.kymjs.frame.model.IModel;
+import com.kymjs.frame.databind.DataBinder;
+import com.kymjs.frame.samples.demo1.SimpleDelegate;
 
 /**
- * Model数据来源，数据加载器的实现
- * Model data loader
+ * 设值器，将数据与视图显示绑定，会在数据改变时调用
  *
- * @param <T> 要加载的数据的类型
- * @author kymjs (http://www.kymjs.com/) on 10/23/15.
+ * @author kymjs (http://www.kymjs.com/) on 10/30/15.
  */
-public abstract class DataLoader<T extends IModel> extends AsyncTaskLoader<T> {
-    protected T data;
+public class Demo2DataBinder implements DataBinder<SimpleDelegate, JavaBean> {
 
-    public DataLoader(Context context, T data) {
-        super(context);
-        this.data = data;
+    @Override
+    public void viewBindModel(SimpleDelegate viewDelegate, JavaBean data) {
+        viewDelegate.setText(data.getName());
     }
 }

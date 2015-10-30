@@ -15,12 +15,10 @@
  */
 package com.kymjs.frame.samples.demo2;
 
-import android.os.Bundle;
-import android.support.v4.content.Loader;
 import android.view.View;
 
 import com.kymjs.frame.databind.DataBindActivity;
-import com.kymjs.frame.databind.SimpleLoader;
+import com.kymjs.frame.databind.DataBinder;
 import com.kymjs.frame.samples.R;
 import com.kymjs.frame.samples.demo1.SimpleDelegate;
 
@@ -30,7 +28,7 @@ import com.kymjs.frame.samples.demo1.SimpleDelegate;
  *
  * @author kymjs (http://www.kymjs.com/) on 10/24/15.
  */
-public class DemoActivity extends DataBindActivity<SimpleDelegate, JavaBean> {
+public class DemoActivity extends DataBindActivity<SimpleDelegate> {
 
     JavaBean data = new JavaBean("名字");
 
@@ -43,43 +41,18 @@ public class DemoActivity extends DataBindActivity<SimpleDelegate, JavaBean> {
             public void onClick(View v) {
                 data.setName("改变了数据");
                 //通知数据发生了改变
-                notifyDataSetChange();
+                notifyModelChanged(data);
             }
         });
     }
 
-    /**
-     * 将数据与View绑定，这样当数据改变的时候，框架就知道这个数据是和哪个View绑定在一起的，就可以自动改变ui
-     * 当数据改变的时候，会回调本方法。
-     *
-     * @param data
-     */
-    @Override
-    public void viewBindModel(JavaBean data) {
-        super.viewBindModel(data);
-        viewDelegate.setText(data.getName());
-    }
-
-    /**
-     * 使用框架中已经实现的最简单的DataLoader
-     * 当然，也可以自己继承SimpleLoader或参考其实现自己写一个数据Loader
-     *
-     * @param args
-     * @return
-     */
-    @Override
-    protected Loader<JavaBean> getDataLoader(Bundle args) {
-        return new SimpleLoader<>(this, data);
-    }
-
-    /**
-     * 框架需要拿到你的视图层代理类
-     *
-     * @return
-     */
     @Override
     protected Class<SimpleDelegate> getDelegateClass() {
         return SimpleDelegate.class;
     }
 
+    @Override
+    public DataBinder getDataBinder() {
+        return new Demo2DataBinder();
+    }
 }

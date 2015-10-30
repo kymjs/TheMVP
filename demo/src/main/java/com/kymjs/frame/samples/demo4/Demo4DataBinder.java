@@ -13,13 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.kymjs.frame.model;
+package com.kymjs.frame.samples.demo4;
+
+import com.kymjs.frame.databind.DataBinder;
 
 /**
- * 用作双向绑定使用
- * Do Model-View two-way binding future use
+ * 设值器，将数据与视图显示绑定，会在数据改变时调用
  *
- * @author kymjs (http://www.kymjs.com/) on 10/23/15.
+ * @author kymjs (http://www.kymjs.com/) on 10/30/15.
  */
-public interface IModel {
+public class Demo4DataBinder implements DataBinder<FragmentDelegate, User> {
+
+    @Override
+    public void viewBindModel(FragmentDelegate viewDelegate, User user) {
+        if (user != null && user.getAge() != null && user.getName() != null) {
+            viewDelegate.setResult(user.getName(), user.getAge());
+        }
+    }
 }
