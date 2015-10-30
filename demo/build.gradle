@@ -24,4 +24,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile project(':framework')
     compile 'com.android.support:appcompat-v7:23.1.0'
+    compile 'de.greenrobot:eventbus:2.4.0'
 }

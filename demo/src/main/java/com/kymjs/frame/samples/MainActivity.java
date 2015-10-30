@@ -20,9 +20,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.kymjs.frame.samples.demo2.DemoActivity;
 import com.kymjs.frame.samples.demo1.SimpleActivity;
+import com.kymjs.frame.samples.demo2.DemoActivity;
 import com.kymjs.frame.samples.demo3.ShellActivity;
+import com.kymjs.frame.samples.demo5.Demo5Activity;
+import com.kymjs.frame.samples.demo6.Demo6Activity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.button3).setOnClickListener(this);
         findViewById(R.id.button4).setOnClickListener(this);
         findViewById(R.id.button5).setOnClickListener(this);
+        findViewById(R.id.button6).setOnClickListener(this);
     }
 
     @Override
@@ -50,10 +53,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this, ShellActivity.class));
                 break;
             case R.id.button4:
-                startActivity(new Intent(this, com.kymjs.frame.samples.demo4.ShellActivity.class));
+                startActivity(new Intent(this, ShellActivity.class));
                 break;
             case R.id.button5:
-                startActivity(new Intent(this, com.kymjs.frame.samples.demo5.Demo5Activity.class));
+                startActivity(new Intent(this, Demo5Activity.class));
+                break;
+            case R.id.button6:
+                startActivity(new Intent(this, Demo6Activity.class));
                 break;
             default:
                 break;

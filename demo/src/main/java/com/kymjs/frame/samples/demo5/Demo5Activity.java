@@ -22,7 +22,7 @@ import com.kymjs.frame.presenter.ActivityPresenter;
 import com.kymjs.frame.samples.R;
 
 /**
- * 使用EvenBus解耦
+ * Toolbar与Menu
  *
  * @author kymjs (http://www.kymjs.com/) on 10/28/15.
  */

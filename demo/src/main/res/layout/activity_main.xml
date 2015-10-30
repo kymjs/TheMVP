@@ -30,5 +30,10 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:text="示例5:Toolbar与Menu"/>
+	<Button
+		android:id="@+id/button6"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="示例6:使用EventBus实现数据绑定"/>
 
 </LinearLayout>

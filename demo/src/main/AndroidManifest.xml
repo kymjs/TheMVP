@@ -21,6 +21,7 @@
 		<activity android:name=".demo4.ShellActivity"/>
 		<activity android:name=".demo5.Demo5Activity"
 				  android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+		<activity android:name=".demo6.Demo6Activity"/>
 	</application>
 
 </manifest>
