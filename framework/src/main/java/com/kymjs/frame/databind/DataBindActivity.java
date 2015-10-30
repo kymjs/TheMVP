@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.kymjs.frame;
+package com.kymjs.frame.databind;
 
 import android.os.Bundle;
 import android.support.v4.app.LoaderManager.LoaderCallbacks;

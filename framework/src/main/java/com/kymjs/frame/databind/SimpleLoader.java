@@ -13,9 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.kymjs.frame;
+package com.kymjs.frame.databind;
 
 import android.content.Context;
+import android.support.v4.content.Loader;
 
 import com.kymjs.frame.model.IModel;
 
@@ -26,10 +27,12 @@ import com.kymjs.frame.model.IModel;
  * @param <T> 要加载的数据的类型
  * @author kymjs (http://www.kymjs.com/) on 10/23/15.
  */
-public class SimpleLoader<T extends IModel> extends DataLoader<T> {
+public class SimpleLoader<T extends IModel> extends Loader<T> {
+    protected T data;
 
     public SimpleLoader(Context context, T data) {
-        super(context, data);
+        super(context);
+        this.data = data;
     }
 
     @Override
@@ -40,10 +43,5 @@ public class SimpleLoader<T extends IModel> extends DataLoader<T> {
         } else {
             forceLoad();
         }
-    }
-
-    @Override
-    public T loadInBackground() {
-        return data;
     }
 }

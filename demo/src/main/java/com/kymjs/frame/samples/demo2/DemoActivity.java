@@ -19,8 +19,8 @@ import android.os.Bundle;
 import android.support.v4.content.Loader;
 import android.view.View;
 
-import com.kymjs.frame.DataBindActivity;
-import com.kymjs.frame.SimpleLoader;
+import com.kymjs.frame.databind.DataBindActivity;
+import com.kymjs.frame.databind.SimpleLoader;
 import com.kymjs.frame.samples.R;
 import com.kymjs.frame.samples.demo1.SimpleDelegate;
 
