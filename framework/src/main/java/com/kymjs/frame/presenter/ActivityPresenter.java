@@ -39,10 +39,7 @@ public abstract class ActivityPresenter<T extends IDelegate> extends AppCompatAc
             viewDelegate = getDelegateClass().newInstance();
             viewDelegate.create(getLayoutInflater(), null, savedInstanceState);
             setContentView(viewDelegate.getRootView());
-            Toolbar toolbar = viewDelegate.getToolbar();
-            if (toolbar != null) {
-                setSupportActionBar(toolbar);
-            }
+            initToolbar();
             viewDelegate.initWidget();
         } catch (InstantiationException e) {
             e.printStackTrace();
@@ -50,6 +47,13 @@ public abstract class ActivityPresenter<T extends IDelegate> extends AppCompatAc
             e.printStackTrace();
         }
         bindEvenListener();
+    }
+
+    protected void initToolbar(){
+        Toolbar toolbar = viewDelegate.getToolbar();
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+        }
     }
 
     protected void bindEvenListener() {
