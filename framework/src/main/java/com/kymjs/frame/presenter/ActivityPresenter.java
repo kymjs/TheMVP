@@ -32,31 +32,34 @@ import com.kymjs.frame.view.IDelegate;
 public abstract class ActivityPresenter<T extends IDelegate> extends AppCompatActivity {
     protected T viewDelegate;
 
+    public ActivityPresenter() {
+        try {
+            viewDelegate = getDelegateClass().newInstance();
+        } catch (InstantiationException e) {
+            throw new RuntimeException("create IDelegate error");
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException("create IDelegate error");
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        try {
-            viewDelegate = getDelegateClass().newInstance();
-            viewDelegate.create(getLayoutInflater(), null, savedInstanceState);
-            setContentView(viewDelegate.getRootView());
-            initToolbar();
-            viewDelegate.initWidget();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }
+        viewDelegate.create(getLayoutInflater(), null, savedInstanceState);
+        setContentView(viewDelegate.getRootView());
+        initToolbar();
+        viewDelegate.initWidget();
         bindEvenListener();
     }
 
-    protected void initToolbar(){
+    protected void bindEvenListener() {
+    }
+
+    protected void initToolbar() {
         Toolbar toolbar = viewDelegate.getToolbar();
         if (toolbar != null) {
             setSupportActionBar(toolbar);
         }
-    }
-
-    protected void bindEvenListener() {
     }
 
     @Override
