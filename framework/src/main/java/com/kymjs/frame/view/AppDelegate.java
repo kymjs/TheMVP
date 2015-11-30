@@ -15,6 +15,7 @@
  */
 package com.kymjs.frame.view;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.SparseArray;
@@ -80,6 +81,10 @@ public abstract class AppDelegate implements IDelegate {
         for (int id : ids) {
             get(id).setOnClickListener(listener);
         }
+    }
+
+    public <T extends Activity> T getActivity() {
+        return (T) rootView.getContext();
     }
 
     public void toast(CharSequence msg) {
