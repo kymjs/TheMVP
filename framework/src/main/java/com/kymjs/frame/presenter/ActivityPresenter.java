@@ -63,6 +63,20 @@ public abstract class ActivityPresenter<T extends IDelegate> extends AppCompatAc
     }
 
     @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        if (viewDelegate != null) {
+            try {
+                viewDelegate = getDelegateClass().newInstance();
+            } catch (InstantiationException e) {
+                throw new RuntimeException("create IDelegate error");
+            } catch (IllegalAccessException e) {
+                throw new RuntimeException("create IDelegate error");
+            }
+        }
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         if (viewDelegate.getOptionsMenuId() != 0) {
             getMenuInflater().inflate(viewDelegate.getOptionsMenuId(), menu);

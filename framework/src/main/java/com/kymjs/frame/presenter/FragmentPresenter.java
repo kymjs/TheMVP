@@ -76,6 +76,20 @@ public abstract class FragmentPresenter<T extends IDelegate> extends Fragment {
     }
 
     @Override
+    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
+        super.onViewStateRestored(savedInstanceState);
+        if (viewDelegate == null) {
+            try {
+                viewDelegate = getDelegateClass().newInstance();
+            } catch (java.lang.InstantiationException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    @Override
     public void onDestroy() {
         super.onDestroy();
         viewDelegate = null;

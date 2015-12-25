@@ -57,6 +57,10 @@ public abstract class AppDelegate implements IDelegate {
         return rootView;
     }
 
+    public void setRootView(View rootView) {
+        this.rootView = rootView;
+    }
+
     @Override
     public void initWidget() {
     }
@@ -83,11 +87,11 @@ public abstract class AppDelegate implements IDelegate {
         }
     }
 
-    public <T extends Activity> T getActivity() {
-        return (T) rootView.getContext();
-    }
-
     public void toast(CharSequence msg) {
         Toast.makeText(rootView.getContext(), msg, Toast.LENGTH_SHORT).show();
+    }
+
+    public <T extends Activity> T getActivity() {
+        return (T) rootView.getContext();
     }
 }
