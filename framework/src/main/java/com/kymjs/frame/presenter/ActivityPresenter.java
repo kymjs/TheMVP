@@ -65,7 +65,7 @@ public abstract class ActivityPresenter<T extends IDelegate> extends AppCompatAc
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        if (viewDelegate != null) {
+        if (viewDelegate == null) {
             try {
                 viewDelegate = getDelegateClass().newInstance();
             } catch (InstantiationException e) {
