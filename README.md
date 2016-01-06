@@ -9,6 +9,8 @@ An Android MVP Architecture Diagram Framwork.
 你可以查看wiki中的简介：[https://github.com/kymjs/TheMVP/wiki/TheMVP-cn](https://github.com/kymjs/TheMVP/wiki/TheMVP-cn)    
 或者查看我博客中详细介绍：[http://www.kymjs.com/code/2015/11/09/01/](http://www.kymjs.com/code/2015/11/09/01/)     
 
+除了本仓库中的简单demo，你还可以看看在实际项目中的使用 [https://github.com/kymjs/CodeCafe](https://github.com/kymjs/CodeCafe)  
+
 ## 使用 
 
 ####AndroidStudio
@@ -18,10 +20,7 @@ build.gradle中添加：
 dependencies {
     compile 'com.kymjs.frame:framework:1.0.3'
 }
-```
-
-####eclipse
-复制jar包 [TheMVPxxx.jar](https://github.com/kymjs/TheMVP/tree/master/binrary) 到你工程的/libs目录中.   
+```  
 
 ##开源协议
 ```
