@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.dcendents.android-maven'
 
-version = "1.0.3"
+version = "1.0.4"
 
 android {
     compileSdkVersion 23
@@ -24,9 +24,7 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:23.+'
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
 }
 
 def siteUrl = 'https://github.com/kymjs/TheMVP'      // 项目的主页
@@ -41,7 +39,7 @@ install {
             project {
                 packaging 'aar'
                 // Add your description here
-                name 'An Android MVP Architecture Diagram Framwork.' 	//项目描述
+                name 'An Android MVP Architecture Diagram Framwork.'    //项目描述
                 url siteUrl
                 // Set your license
                 licenses {
@@ -52,7 +50,7 @@ install {
                 }
                 developers {
                     developer {
-                        id 'kymjs'		//填写的一些基本信息
+                        id 'kymjs'        //填写的一些基本信息
                         name 'ZhangTao'
                         email 'kymjs123@gmail.com'
                     }
@@ -90,7 +88,7 @@ bintray {
     configurations = ['archives']
     pkg {
         repo = "maven"
-        name = "TheMVP"	//发布到JCenter上的项目名字
+        name = "TheMVP"    //发布到JCenter上的项目名字
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]
