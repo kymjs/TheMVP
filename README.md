@@ -18,7 +18,7 @@ build.gradle中添加：
   
 ```
 dependencies {
-    compile 'com.kymjs.frame:framework:1.0.3'
+    compile 'com.kymjs.frame:framework:1.0.5'
 }
 ```  
 
