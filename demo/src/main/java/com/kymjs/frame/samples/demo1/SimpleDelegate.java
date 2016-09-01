@@ -18,7 +18,7 @@ package com.kymjs.frame.samples.demo1;
 import android.widget.TextView;
 
 import com.kymjs.frame.samples.R;
-import com.kymjs.frame.view.AppDelegate;
+import com.kymjs.themvp.view.AppDelegate;
 
 /**
  * View视图层，完全移除与Presenter业务逻辑的耦合

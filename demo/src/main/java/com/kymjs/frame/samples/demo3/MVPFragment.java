@@ -17,9 +17,9 @@ package com.kymjs.frame.samples.demo3;
 
 import android.view.View;
 
-import com.kymjs.frame.presenter.FragmentPresenter;
 import com.kymjs.frame.samples.R;
 import com.kymjs.frame.samples.demo1.SimpleDelegate;
+import com.kymjs.themvp.presenter.FragmentPresenter;
 
 /**
  * 这里就偷懒直接复用demo1里面的simpleDelegate视图代理了

@@ -1,28 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-			  android:layout_width="match_parent"
-			  android:layout_height="match_parent"
-			  android:orientation="vertical">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-	<EditText
-		android:id="@+id/editText"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"/>
+    <data>
 
-	<EditText
-		android:id="@+id/editText2"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"/>
+        <variable
+            name="user"
+            type="com.kymjs.frame.samples.demo4.User" />
+    </data>
 
-	<Button
-		android:id="@+id/button"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:text="点击查看"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@{user.name}" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@{user.age}" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="点击查看" />
 
 
-	<TextView
-		android:id="@+id/text"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"/>
-</LinearLayout>
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</layout>

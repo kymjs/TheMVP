@@ -1,39 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-	<Button
-		android:id="@+id/button1"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:text="示例1:最简单的实现"/>
-	<Button
-		android:id="@+id/button2"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:text="示例2:最简单的数据绑定"/>
-	<Button
-		android:id="@+id/button3"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:text="示例3:在fragment中的实现"/>
-	<Button
-		android:id="@+id/button4"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:text="示例4:在fragment中的数据绑定"/>
-	<Button
-		android:id="@+id/button5"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:text="示例5:Toolbar与Menu"/>
-	<Button
-		android:id="@+id/button6"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:text="示例6:使用EventBus实现数据绑定"/>
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="示例1:最简单的实现" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="示例2:最简单的数据绑定" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="示例3:在fragment中的实现" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="示例4:在fragment中的数据绑定" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="示例5:Toolbar与Menu" />
 
 </LinearLayout>

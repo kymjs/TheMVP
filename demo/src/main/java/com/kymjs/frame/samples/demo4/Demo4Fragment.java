@@ -15,27 +15,39 @@
  */
 package com.kymjs.frame.samples.demo4;
 
+import android.os.Bundle;
 import android.view.View;
 
-import com.kymjs.frame.databind.DataBindFragment;
-import com.kymjs.frame.databind.DataBinder;
 import com.kymjs.frame.samples.R;
+import com.kymjs.frame.samples.databinding.FragmentUserBinding;
+import com.kymjs.themvp.databind.DataBindFragment;
 
 /**
+ * fragment使用databinding的例子
+ *
  * @author kymjs (http://www.kymjs.com/) on 10/26/15.
  */
-public class Demo4Fragment extends DataBindFragment<FragmentDelegate> {
+public class Demo4Fragment extends DataBindFragment<FragmentDelegate, FragmentUserBinding> {
     private User data = new User();
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        binding.setUser(data);
+    }
 
     @Override
     protected void bindEvenListener() {
         super.bindEvenListener();
+        /**
+         *此处也可以像demo2里面使用databinding去设置点击事件
+         */
         viewDelegate.get(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                data.setName(viewDelegate.getText(R.id.editText));
-                data.setAge(viewDelegate.getText(R.id.editText2));
-                notifyModelChanged(data);
+                data.setName("设置名字");
+                data.setAge("设置年龄");
+                binding.setUser(data);
             }
         });
     }
@@ -43,10 +55,5 @@ public class Demo4Fragment extends DataBindFragment<FragmentDelegate> {
     @Override
     protected Class<FragmentDelegate> getDelegateClass() {
         return FragmentDelegate.class;
-    }
-
-    @Override
-    public DataBinder getDataBinder() {
-        return new Demo4DataBinder();
     }
 }

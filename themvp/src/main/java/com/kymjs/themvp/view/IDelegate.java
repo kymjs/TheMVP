@@ -13,37 +13,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.kymjs.frame.samples.demo5;
+package com.kymjs.themvp.view;
 
+import android.databinding.ViewDataBinding;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.widget.TextView;
-
-import com.kymjs.frame.samples.R;
-import com.kymjs.themvp.view.AppDelegate;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 /**
- * 使用Butterknife与EvenBus
+ * View delegate base class
+ * 视图层代理的接口协议
  *
- * @author kymjs (http://www.kymjs.com/) on 10/28/15.
+ * @author kymjs (http://www.kymjs.com/) on 10/23/15.
  */
-public class Demo5Delegate extends AppDelegate {
+public interface IDelegate {
+    <D extends ViewDataBinding> D create(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState);
 
-    @Override
-    public int getRootLayoutId() {
-        return R.layout.activity_toolbar;
-    }
+    int getOptionsMenuId();
 
-    @Override
-    public int getOptionsMenuId() {
-        return R.menu.menu;
-    }
+    Toolbar getToolbar();
 
-    public Toolbar getToolbar() {
-        return get(R.id.toolbar);
-    }
+    View getRootView();
 
-    public void setText(String text) {
-        TextView textView = get(R.id.text);
-        textView.setText(text);
-    }
+    int getRootLayoutId();
+
+    void initWidget();
 }

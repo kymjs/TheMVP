@@ -13,27 +13,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.kymjs.frame.samples.demo6;
+package com.kymjs.frame.samples.demo2;
 
-import com.kymjs.frame.model.IModel;
+import android.widget.TextView;
 
-import de.greenrobot.event.EventBus;
+import com.kymjs.frame.samples.R;
+import com.kymjs.themvp.view.AppDelegate;
 
 /**
- * 一个简单的javabean类
- * javabean必须实现Imodel接口
+ * View视图层，完全移除与Presenter业务逻辑的耦合
  *
- * @author kymjs (http://www.kymjs.com/) on 10/30/15.
+ * @author kymjs (http://www.kymjs.com/) on 10/23/15.
  */
-public class Demo6Data implements IModel {
-    private String name;
+public class Demo2Delegate extends AppDelegate {
 
-    public String getName() {
-        return name;
+    @Override
+    public int getRootLayoutId() {
+        return R.layout.delegate_demo;
     }
 
-    public void setName(String name) {
-        this.name = name;
-        EventBus.getDefault().post(this);
+    public void setText(String text) {
+        TextView textView = get(R.id.text);
+        textView.setText(text);
     }
 }

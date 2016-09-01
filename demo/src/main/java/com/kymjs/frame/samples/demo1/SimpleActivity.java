@@ -17,8 +17,8 @@ package com.kymjs.frame.samples.demo1;
 
 import android.view.View;
 
-import com.kymjs.frame.presenter.ActivityPresenter;
 import com.kymjs.frame.samples.R;
+import com.kymjs.themvp.presenter.ActivityPresenter;
 
 /**
  * 在这里做业务逻辑操作，通过viewDelegate操作View层控件
