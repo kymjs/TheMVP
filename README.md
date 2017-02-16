@@ -16,12 +16,21 @@ An Android MVP Architecture Diagram Framwork.
 
 ## 使用 
 
-####AndroidStudio
+#### AndroidStudio
 build.gradle中添加：
   
 ```
 dependencies {
     compile 'com.kymjs.core:themvp:1.0.7'
+}
+```  
+
+#### 若不使用 Databinding
+请使用```1.0.5```版本：  
+  
+```
+dependencies {
+    compile 'com.kymjs.core:themvp:1.0.5'
 }
 ```  
 
