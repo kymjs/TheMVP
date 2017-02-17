@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.kymjs.frame.samples"
-		  xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.kymjs.themvp.samples">
 
-	<application
-		android:allowBackup="true"
-		android:icon="@mipmap/ic_launcher"
-		android:label="@string/app_name"
-		android:supportsRtl="true"
-		android:theme="@style/AppTheme">
-		<activity android:name=".MainActivity">
-			<intent-filter>
-				<action android:name="android.intent.action.MAIN"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.kymjs.themvp.samples.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
-				<category android:name="android.intent.category.LAUNCHER"/>
-			</intent-filter>
-		</activity>
-		<activity android:name=".demo1.SimpleActivity"/>
-		<activity android:name=".demo2.DemoActivity"/>
-		<activity android:name=".demo3.ShellActivity"/>
-		<activity android:name=".demo4.ShellActivity"/>
-		<activity android:name=".demo5.Demo5Activity"
-				  android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-		<activity android:name=".demo6.Demo6Activity"/>
-	</application>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.kymjs.themvp.samples.demo1.SimpleActivity"/>
+        <activity android:name="com.kymjs.themvp.samples.demo2.DemoActivity"/>
+        <activity android:name="com.kymjs.themvp.samples.demo3.ShellActivity"/>
+        <activity android:name="com.kymjs.themvp.samples.demo4.ShellActivity"/>
+        <activity android:name="com.kymjs.themvp.samples.demo5.Demo5Activity"/>
+        <activity android:name="com.kymjs.themvp.samples.demo6.Demo6Activity"/>
+    </application>
 
 </manifest>
