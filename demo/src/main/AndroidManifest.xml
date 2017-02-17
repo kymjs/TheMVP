@@ -19,7 +19,9 @@
         <activity android:name="com.kymjs.themvp.samples.demo2.DemoActivity"/>
         <activity android:name="com.kymjs.themvp.samples.demo3.ShellActivity"/>
         <activity android:name="com.kymjs.themvp.samples.demo4.ShellActivity"/>
-        <activity android:name="com.kymjs.themvp.samples.demo5.Demo5Activity"/>
+        <activity
+            android:name="com.kymjs.themvp.samples.demo5.Demo5Activity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name="com.kymjs.themvp.samples.demo6.Demo6Activity"/>
     </application>
 
