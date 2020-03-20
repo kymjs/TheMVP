@@ -1,4 +1,4 @@
-[![OSL](http://cdn.kymjs.com/image/logo_s.png)](http://www.kymjs.com/works/)
+[![OSL](https://kymjs.com/qiniu/image/logo3.png)](https://www.kymjs.com/works/)
 =================
 
 ## TheMVP简介
