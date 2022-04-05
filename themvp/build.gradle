@@ -1,5 +1,8 @@
 apply plugin: 'com.android.library'
 
+group = 'com.github.kymjs'
+version = "2.0.0"
+
 android {
     compileSdkVersion 30
     resourcePrefix "TheMVP__"
