@@ -15,8 +15,9 @@
  */
 package com.kymjs.themvp.samples.demo5;
 
-import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
+
+import androidx.appcompat.widget.Toolbar;
 
 import com.kymjs.themvp.samples.R;
 import com.kymjs.themvp.view.AppDelegate;

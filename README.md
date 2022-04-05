@@ -1,35 +1,24 @@
-[![OSL](https://kymjs.com/qiniu/image/logo3.png)](https://www.kymjs.com/works/)
+[![OSL](https://kymjs.com/qiniu/image/logo3.png)](https://kymjs.com/works/)
 =================
 
 ## TheMVP简介
-An Android MVP Architecture Diagram Framwork.      
-怎样从架构级别去搭建一个APP，怎样让他应对日益更改的界面与业务逻辑？        
 越小的类，bug越不容易出现，越容易调试，更容易测试，我相信这一点大家是都赞同的。在MVP模式下，View和Model是完全分离没有任何直接关联的(比如你在View层中完全不需要导Model的包，也不应该去关联它们)。      
-使用MVP模式能够更方便的帮助Activity(或Fragment)职责分离，减小类体积，使项目结构更加清晰。         
+使用 MVP 模式能够更方便的帮助 Activity (或 Fragment )职责分离，减小类体积，使项目结构更加清晰。         
 
-若您的项目使用了```databinding```，请使用```1.0.7```版本(代码见```databind```分支)。
-   
-或者查看我博客中详细介绍：[http://www.kymjs.com/code/2015/11/09/01/](http://www.kymjs.com/code/2015/11/09/01/)     
+或者查看开源实验室中详细介绍：  
+[https://kymjs.com/code/2015/11/09/01/](https://kymjs.com/code/2015/11/09/01/)
 
-除了本仓库中的简单demo，你还可以看看在实际项目中的使用 [https://github.com/kymjs/CodeCafe](https://github.com/kymjs/CodeCafe)  
+## 谁在使用
 
-## 使用 
+本项目已被`支付宝`使用，可查看设置->关于->版权信息。    
 
-#### Android Studio
-请使用```1.0.5```版本：  
-  
+你也可以提交`Pull Request`告诉我你的 APP 使用了`TheMVP`
+
+## 使用方式  
+
 ```
 dependencies {
-    compile 'com.kymjs.core:themvp:1.0.5'
-}
-```  
-
-#### 若使用 Databinding
-build.gradle中添加：
-  
-```
-dependencies {
-    compile 'com.kymjs.core:themvp:1.0.7'
+    implementation 'com.kymjs.core:themvp:1.0.5'
 }
 ```  
 

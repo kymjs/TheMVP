@@ -17,8 +17,9 @@ package com.kymjs.themvp.samples;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.kymjs.themvp.samples.demo1.SimpleActivity;
 import com.kymjs.themvp.samples.demo2.DemoActivity;
