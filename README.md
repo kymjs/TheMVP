@@ -16,9 +16,20 @@
 
 ## 使用方式  
 
+当前最新版本为：
+[![](https://jitpack.io/v/kymjs/TheMVP.svg)](https://jitpack.io/#kymjs/TheMVP)
+
 ```
+// root build.gradle
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+// module build.gradle
 dependencies {
-    implementation 'com.kymjs.core:themvp:1.0.5'
+    implementation 'com.github.kymjs:themvp:2.0.0'
 }
 ```  
 

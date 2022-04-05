@@ -1,1 +1,2 @@
-include ':demo', ':themvp'
+include ':themvp'
+include ':demo'
