@@ -1,8 +1,8 @@
-[![OSL](https://kymjs.com/qiniu/image/logo3.png)](https://kymjs.com/works/)
+[![OSL](https://cdn.kymjs.com:8843/qiniu/image/logo3.png)](https://kymjs.com/works/)
 =================
 
 ## TheMVP简介
-越小的类，bug越不容易出现，越容易调试，更容易测试，我相信这一点大家是都赞同的。在MVP模式下，View和Model是完全分离没有任何直接关联的(比如你在View层中完全不需要导Model的包，也不应该去关联它们)。      
+越小的类，bug 越不容易出现，越容易调试，更容易测试，我相信这一点大家是都赞同的。在 MVP 模式下，View 和 Model 是完全分离没有任何直接关联的(比如你在 View 层中完全不需要导 Model 的包，也不应该去关联它们)。      
 使用 MVP 模式能够更方便的帮助 Activity (或 Fragment )职责分离，减小类体积，使项目结构更加清晰。         
 
 或者查看开源实验室中详细介绍：  
@@ -29,13 +29,13 @@ allprojects {
 
 // module build.gradle
 dependencies {
-    implementation 'com.github.kymjs:themvp:2.0.0'
+    implementation 'com.github.kymjs:themvp:2.0.1'
 }
 ```  
 
 ## 开源协议
 ```
- Copyright (C) 2015, 张涛
+ Copyright (C) 2015-2025, 张涛
  
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
