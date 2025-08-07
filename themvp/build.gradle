@@ -7,13 +7,13 @@ group = 'com.github.kymjs'
 version = "2.0.1"
 
 android {
-    namespace = 'com.github.kymjs'
+    namespace = 'com.github.kymjs.themvp'
     compileSdk 33
     resourcePrefix "TheMVP__"
 
     defaultConfig {
         minSdk 17
-        targetSdkVersion 35
+        targetSdk 35
         versionCode 201
         versionName version
     }
